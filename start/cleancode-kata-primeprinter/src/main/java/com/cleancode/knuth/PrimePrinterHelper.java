@@ -44,6 +44,10 @@ public class PrimePrinterHelper {
             primes[primeIndex] = candidate;
         }
 
+        printPrimes(primes, numberOfPrimes);
+    }
+
+    private void printPrimes(int[] primes, int numberOfPrimes) {
         while (pageoffset <= numberOfPrimes) {
             System.out.print("The First ");
             System.out.print(Integer.toString(numberOfPrimes));
@@ -59,7 +63,6 @@ public class PrimePrinterHelper {
             System.out.println("\f");
             pagenumber++;
             pageoffset += linesPerPage * columns;
-
         }
     }
 }
